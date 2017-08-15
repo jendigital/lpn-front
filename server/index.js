@@ -11,10 +11,6 @@ const basic = auth.basic({
 });
 
 app.use(auth.connect(basic));
-app.get('/', (req, res) => {
-    res.send(`Hello from express - ${req.user}!`);
-});
-
 // Priority serve any static files.
 app.use(express.static(path.resolve(__dirname, '../react-ui/build')));
 
