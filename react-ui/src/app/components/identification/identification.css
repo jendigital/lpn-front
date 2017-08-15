@@ -1,0 +1,50 @@
+#identification {
+    height: 100vh;
+    background: url('https://storage.googleapis.com/life-personal-network/identification.png');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+#identification #connection {
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 70vh;
+    text-align: center;
+}
+
+#identification #connection img {
+    width: 10%;
+}
+
+#identification #connection button {
+    font-size: 15px;
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid white;
+    color: white;
+    background-color: transparent;
+    font-weight: lighter;
+    font-family: sans-serif;
+    border-radius: 5px;
+}
+
+#identification #connection button:first-child {
+    margin-right: 10px;
+}
+
+#identification #notices {
+    font-size: 12px;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+}
