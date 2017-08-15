@@ -1,7 +1,7 @@
 {
-  "name": "heroku-cra-node",
+  "name": "life-personal-network-front-node-js-with-heroku",
   "version": "1.0.0",
-  "description": "How to use create-react-app with a custom Node API on Heroku",
+  "description": "Life personal network use create-react-app with a custom Node API on Heroku",
   "engines": {
     "node": "6.11.x"
   },
@@ -14,7 +14,8 @@
     "react-ui/node_modules"
   ],
   "dependencies": {
-    "express": "^4.14.1"
+    "express": "^4.14.1",
+    "http-auth": "^3.2.3"
   },
   "repository": {
     "type": "git",
