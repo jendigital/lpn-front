@@ -5,7 +5,8 @@ $light-green:    #8FC286;
     display: flex !important;
     .modal-dialog {
         margin: auto;
-
+        width: 325px;
+        
         @media (min-width: 768px) {
             width: 400px;
         }

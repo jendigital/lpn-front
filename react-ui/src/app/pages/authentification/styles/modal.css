@@ -1,7 +1,8 @@
 .modal {
   display: flex !important; }
   .modal .modal-dialog {
-    margin: auto; }
+    margin: auto;
+    width: 325px; }
     @media (min-width: 768px) {
       .modal .modal-dialog {
         width: 400px; } }
