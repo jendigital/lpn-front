@@ -1,45 +1,22 @@
 import React, { Component } from 'react';
+import { Route, Switch } from 'react-router-dom';
 
-import { injectIntl } from 'react-intl';
-import Identification from './components/identification/identification';
+import Menu from './pages/components/commun/menu/menu';
+import MobileMenu from './pages/components/commun/mobile_menu/mobile_menu';
+
+import Identification from './pages/authentification/identification/identification';
+import Login from './pages/authentification/login/connection/connection';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      message: null,
-      fetching: true
-    };
-  }
-
-  componentDidMount() {
-    fetch('/api')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error(`status ${response.status}`);
-        }
-        return response.json();
-      })
-      .then(json => {
-        this.setState({
-          message: json.message,
-          fetching: false
-        });
-      }).catch(e => {
-        this.setState({
-          message: `API call failed: ${e}`,
-          fetching: false
-        });
-      })
-  }
-
-  render() {
-    return (
-      <div className="App">
-          <Identification />
-      </div>
-    );
-  }
+    render () {
+        return (
+            <div id='content'>
+                <Switch>
+                    <Route exact path='/' component={Identification} />
+                </Switch>
+            </div>
+        );
+    }
 }
 
-export default injectIntl(App);
+export default App;

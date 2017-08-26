@@ -1,0 +1,180 @@
+$dark-grey-blue: #5B6774;
+$light-green:    #8FC286;
+
+.modal {
+    display: flex !important;
+    .modal-dialog {
+        margin: auto;
+
+        @media (min-width: 768px) {
+            width: 400px;
+        }
+    }
+}
+
+.modal-content {
+    color: $dark-grey-blue;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    border: none !important;
+
+    .progress {
+        background-color: transparent;
+        text-align: center;
+        padding-top: 20px;
+        height: auto;
+
+        .circle, .bar {
+            display: inline-block;
+            width: 80px;
+            height: 3px;
+            border-left: none;
+            border-right: none;
+            vertical-align: middle;
+        }
+
+        .circle{
+            width: 20px;
+            height: 20px;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        &.firstStep {
+            .circle {
+                color: $dark-grey-blue;
+                background-color: white;
+
+                &:first-child {
+                    color: white;
+                    background-color: $light-green;
+                }
+            }
+
+            .bar {
+                background-color: white;
+            }
+        }
+
+        &.nextStep {
+            .circle {
+                color: white;
+                background-color: $light-green;
+
+                &:last-child {
+                   color: $dark-grey-blue;
+                   background-color: white;
+                }
+            }
+
+            .bar {
+                &.next {
+                    background-color: $light-green;
+                }
+
+                &.last {
+                    background-color: white;
+                }
+            }
+        }
+
+        &.lastStep {
+            .circle, .bar {
+                color: white;
+                background-color: $light-green;
+            }
+        }
+    }
+
+    button {
+        color: white;
+        border-color: transparent;
+        border-radius: 0;
+    }
+
+    .modal-header {
+        text-align: center;
+        padding: 5px;
+        border-bottom: 0;
+        margin-bottom: 60px;
+
+        .registration, .signin, .details {
+            display: none;
+            font-weight: normal;
+            font-size: 13px;
+        }
+
+        &.firstStep .registration, &.nextStep .signin, &.lastStep .details {
+            display: block;
+        }
+
+        .close {
+            color: black;
+        }
+    }
+
+    .authentification {
+        background-color: white;
+        margin-top: 20px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+        -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+
+        .modal-body {
+            padding-bottom: 0;
+
+            .registration, .signin, .details {
+                display: none;
+            }
+
+            &.firstStep .registration, &.nextStep .signin, &.lastStep .details {
+                display: block;
+            }
+
+            .form-horizontal .form-group {
+                margin-right: 5px;
+                margin-left: 5px;
+
+                input, input::placeholder, select, option, .form-control {
+                    color: $dark-grey-blue;
+                }
+
+                input {
+                    border: 0;
+                    border-bottom: 1px solid #ccc;
+                    border-radius: 0;
+                }
+            }
+        }
+    }
+
+    .modal-footer {
+        border-top: 0;
+        padding-top: 0;
+        margin-top: 70px;
+
+        button.left, button.right, button.ok {
+            display: none;
+        }
+
+        &.firstStep button.right, &.nextStep button.left, &.lastStep button.ok {
+            display: inline-block;
+        }
+
+        &.lastStep button.right {
+            display: none;
+        }
+
+        button {
+
+            &.ok {
+                background-color: $light-green;
+            }
+
+            &.left, &.right {
+                background-color: $dark-grey-blue;
+            }
+        }
+    }
+}

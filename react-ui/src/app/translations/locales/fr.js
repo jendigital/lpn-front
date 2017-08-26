@@ -6,8 +6,7 @@ const messages = {
   "noMatch.UnderConstruction": "Cette fonctionnalité du site est en cours de construction.",
 
   "identification.personal_network": "Personal Network",
-  "identification.slogan":           "Créez votre propre monde",
-  "identification.signin":           "Se connecter",
+  "identification.login":            "Se connecter",
   "identification.signup":           "S'inscrire",
 
   "policy.languages":     "Langues disponibles: ",
@@ -18,7 +17,7 @@ const messages = {
   "policy.register":      "Enregistré en suisse ",
   "policy.brand":         " Life Personal Network ©",
 
-  "subscription.create":        "CREER VOTRE COMPTE",
+  "subscription.create":        "Créer votre compte",
   "subscription.registration":  "Enregistrement",
   "subscription.email":         "Email",
   "subscription.password":      "Mot de passe",
@@ -42,9 +41,11 @@ const messages = {
   "subscription.conditions2":   "et vous certifiez avoir lu les",
   "subscription.cookie":        "comprenant l'usage de cookie.",
 
+  "login.title":                "SE CONNECTER",
   "login.remember":             "Se souvenir de moi",
+  "login.connection":           "Connexion",
   "login.cancel":               "Annuler",
-  "login.forgot":               "Oubli de mot de passe?",
+  "login.forgot":               "Mot de passe oublié?",
 
   "reset.email":                "Rentrez votre email",
   "reset.reinitiate":           "Réinitialisez mon mot de passe",

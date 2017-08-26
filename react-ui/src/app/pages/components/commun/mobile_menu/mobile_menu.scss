@@ -1,0 +1,103 @@
+$dark-blue:         #304254;
+$really-light-blue: #A3AEB7;
+
+$screen-xs-min:   465px;
+$screen-sm-min:     768px;
+$screen-smbis-min:  650px;
+
+
+#mobile_header {
+    border: 0;
+    height: 10vh;
+    position: absolute;
+    background-color: transparent;
+
+    //@media (min-width: $screen-sm-min){
+        display: none;
+    //}
+
+    .navbar-header {
+        height: 10vh;
+        background: $dark-blue;
+    }
+
+    .navbar-toggle {
+        float: left;
+        margin-right: 0;
+        margin-left: 15px;
+        padding-top: 15px;
+        border-color: $dark-blue;
+    }
+
+    .navbar-brand {
+        padding: 15px 15px;
+        width: 75%;
+
+        &> img {
+
+            @media (min-width: $screen-smbis-min) and (max-width: $screen-sm-min){
+                width: 10%;
+            }
+
+            @media (min-width: $screen-xs-min) and (max-width: $screen-smbis-min){
+                width: 15%;
+            }
+
+            @media (max-width: $screen-xs-min){
+                width: 20%;
+            }
+        }
+    }
+
+    .navbar-collapse{
+        background-color: $really-light-blue;
+        height: 90vh;
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+        img {
+              @media (min-width: $screen-smbis-min) and (max-width: $screen-sm-min){
+                  width: 15%;
+              }
+
+              @media (min-width: $screen-xs-min) and (max-width: $screen-smbis-min){
+                  width: 20%;
+              }
+
+              @media (max-width: $screen-xs-min){
+                  width: 25%;
+              }
+        }
+
+        .icons{
+            margin-top: 10px;
+            text-align: center;
+
+            a {
+                color: $dark-blue;
+                span {
+                    padding-left: 30px;
+                    padding-right: 30px;
+                    @media (min-width: $screen-smbis-min) and (max-width: $screen-sm-min){
+                        padding-left: 30px;
+                        padding-right: 30px;
+                    }
+
+                    @media (min-width: $screen-xs-min) and (max-width: $screen-smbis-min){
+                        padding-left: 25px;
+                        padding-right: 25px;
+                    }
+
+                    @media (max-width: $screen-xs-min){
+                        padding-left: 20px;
+                        padding-right: 20px;
+                    }
+                }
+
+                img {
+                    padding-right: 10px;
+                }
+            }
+        }
+    }
+}

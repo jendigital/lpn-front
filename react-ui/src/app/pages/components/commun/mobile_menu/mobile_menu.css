@@ -1,0 +1,63 @@
+#mobile_header {
+  border: 0;
+  height: 10vh;
+  position: absolute;
+  background-color: transparent;
+  display: none; }
+  #mobile_header .navbar-header {
+    height: 10vh;
+    background: #304254; }
+  #mobile_header .navbar-toggle {
+    float: left;
+    margin-right: 0;
+    margin-left: 15px;
+    padding-top: 15px;
+    border-color: #304254; }
+  #mobile_header .navbar-brand {
+    padding: 15px 15px;
+    width: 75%; }
+    @media (min-width: 650px) and (max-width: 768px) {
+      #mobile_header .navbar-brand > img {
+        width: 10%; } }
+    @media (min-width: 465px) and (max-width: 650px) {
+      #mobile_header .navbar-brand > img {
+        width: 15%; } }
+    @media (max-width: 465px) {
+      #mobile_header .navbar-brand > img {
+        width: 20%; } }
+  #mobile_header .navbar-collapse {
+    background-color: #A3AEB7;
+    height: 90vh;
+    padding-top: 30px;
+    padding-bottom: 30px; }
+    @media (min-width: 650px) and (max-width: 768px) {
+      #mobile_header .navbar-collapse img {
+        width: 15%; } }
+    @media (min-width: 465px) and (max-width: 650px) {
+      #mobile_header .navbar-collapse img {
+        width: 20%; } }
+    @media (max-width: 465px) {
+      #mobile_header .navbar-collapse img {
+        width: 25%; } }
+    #mobile_header .navbar-collapse .icons {
+      margin-top: 10px;
+      text-align: center; }
+      #mobile_header .navbar-collapse .icons a {
+        color: #304254; }
+        #mobile_header .navbar-collapse .icons a span {
+          padding-left: 30px;
+          padding-right: 30px; }
+          @media (min-width: 650px) and (max-width: 768px) {
+            #mobile_header .navbar-collapse .icons a span {
+              padding-left: 30px;
+              padding-right: 30px; } }
+          @media (min-width: 465px) and (max-width: 650px) {
+            #mobile_header .navbar-collapse .icons a span {
+              padding-left: 25px;
+              padding-right: 25px; } }
+          @media (max-width: 465px) {
+            #mobile_header .navbar-collapse .icons a span {
+              padding-left: 20px;
+              padding-right: 20px; } }
+        #mobile_header .navbar-collapse .icons a img {
+          padding-right: 10px; }

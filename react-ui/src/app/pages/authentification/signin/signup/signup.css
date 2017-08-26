@@ -1,0 +1,11 @@
+.modal-content #subscription .modal-body #birth, .modal-content #subscription .modal-body #date {
+  display: inline-block; }
+
+.modal-content #subscription .modal-body #birth {
+  width: 25%; }
+
+.modal-content #subscription .modal-body #date {
+  width: 75%; }
+
+.modal-content #subscription .modal-footer {
+  text-align: center; }
