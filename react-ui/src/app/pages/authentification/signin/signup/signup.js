@@ -54,7 +54,7 @@ const SignUp =  React.createClass({
     },
 
     submit: function() {
-
+        this.context.router.push('/home');
     },
 
     render() {

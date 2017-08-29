@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
 import { FormattedMessage } from 'react-intl';
+import { Route } from 'react-router-dom';
 import { BrowserRouter, Link } from 'react-router-dom';
 import { ModalContainer, ModalRoute } from 'react-router-modal';
 import './identification.css';
@@ -10,20 +11,44 @@ import Signup from '../signin/signup/signup';
 
 const Identification = React.createClass({
     getInitialState() {
-      return { loginShow: false, signinShow: false };
+        console.log(this.prop);
+        if(this.props.location.pathname === "/login")
+            return { loginShow: true, signinShow: false };
+        if(this.props.location.pathname === "/signin")
+            return { loginShow: false, signinShow: true };
+        return { loginShow: false, signinShow: false };
     },
-    render() {
-        let loginClose = () => this.setState({ loginShow: false });
-        let signinClose = () => this.setState({ signinShow: false });
+
+    loginShow() {
+        this.setState({ loginShow: true });
+        this.props.history.push("/login");
+    },
+
+    signinShow() {
+        this.setState({ signinShow: true });
+        this.props.history.push("/signin");
+    },
+
+    loginClose() {
+        this.setState({ loginShow: false });
+        this.props.history.push("/");
+    },
+
+    signinClose() {
+        this.setState({ signinShow: false });
+        this.props.history.push("/");
+    },
+
+    render: function() {
         return (
             <div id="identification">
                 <div id="connection">
                     <img src='https://storage.googleapis.com/life-personal-network/commun/logo.png' alt="logo" />
                     <div>
-                        <Button onClick={()=>this.setState({ loginShow: true })}>
+                        <Button onClick={this.loginShow}>
                             <FormattedMessage id="identification.login" />
                         </Button>
-                        <Button onClick={()=>this.setState({ signinShow: true })}>
+                        <Button onClick={this.signinShow}>
                             <FormattedMessage id="identification.signup" />
                         </Button>
                     </div>
@@ -37,8 +62,8 @@ const Identification = React.createClass({
                     <FormattedMessage id="policy.register" />
                     <FormattedMessage id="policy.brand" />
                 </p>
-                <Login show={this.state.loginShow} onHide={loginClose} />
-                <Signup show={this.state.signinShow} onHide={signinClose} />
+                <Login show={this.state.loginShow} onHide={this.loginClose} />
+                <Signup show={this.state.signinShow} onHide={this.signinClose} />
             </div>
         );
     }

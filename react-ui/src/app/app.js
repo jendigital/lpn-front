@@ -1,18 +1,21 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-import Menu from './pages/components/commun/menu/menu';
-import MobileMenu from './pages/components/commun/mobile_menu/mobile_menu';
-
 import Identification from './pages/authentification/identification/identification';
-import Login from './pages/authentification/login/connection/connection';
+import RequireAuth from './pages/authentification/require-auth/require-auth';
+
+import MainLayout from './layouts/default/layout';
+import Home from './pages/homepage/home';
 
 class App extends Component {
     render () {
         return (
-            <div id='content'>
+            <div id='container'>
                 <Switch>
                     <Route exact path='/' component={Identification} />
+                    <Route exact path='/login' component={Identification} />
+                    <Route exact path='/signin' component={Identification} />
+                    <Route exact path='/home' render={() => RequireAuth(<MainLayout><Home /></MainLayout>)} />
                 </Switch>
             </div>
         );

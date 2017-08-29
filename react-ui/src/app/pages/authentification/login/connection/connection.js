@@ -6,6 +6,11 @@ import './connection.css';
 import '../../styles/modal.css';
 
 const Login =  React.createClass({
+
+    submit() {
+        this.context.router.push('/home');
+    },
+
     render() {
         return (
           <Modal {...this.props} aria-labelledby="connection">
@@ -25,7 +30,7 @@ const Login =  React.createClass({
                           <FormGroup controlId="Password">
                               <FormControl type="password" placeholder="Mot de passe" />
                           </FormGroup>
-                          <Button id="connect"><FormattedMessage id="login.connection" /></Button>
+                          <Button id="connect" onClick={this.submit}><FormattedMessage id="login.connection" /></Button>
                           <FormGroup controlId="Remember">
                               <Checkbox>Souvenez-vous de moi</Checkbox>
                           </FormGroup>
