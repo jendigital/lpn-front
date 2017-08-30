@@ -4,6 +4,7 @@ import { FormattedMessage } from 'react-intl';
 import { Route } from 'react-router-dom';
 import { BrowserRouter, Link } from 'react-router-dom';
 import { ModalContainer, ModalRoute } from 'react-router-modal';
+import $ from 'jquery';
 import './identification.css';
 
 import Login from '../login/connection/connection';
@@ -34,6 +35,7 @@ const Identification = React.createClass({
     },
 
     signinClose() {
+        $('.toaster').removeClass('show');
         this.setState({ signinShow: false });
         this.props.history.push("/");
     },

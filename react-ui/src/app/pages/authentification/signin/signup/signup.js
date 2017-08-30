@@ -144,7 +144,7 @@ const SignUp =  React.createClass({
 
     render() {
         return (
-          <Modal {...this.props} aria-labelledby="subscription" onHide={this.offAlerts}>
+          <Modal {...this.props} aria-labelledby="subscription">
               <div className="progress firstStep">
                   <div className="circle">
                       1

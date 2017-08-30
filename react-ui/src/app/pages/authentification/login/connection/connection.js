@@ -17,9 +17,11 @@ const Login =  React.createClass({
               <div id="connection" className="authentification">
                   <Modal.Header closeButton>
                       <Modal.Title id="connection_title">
-                          <h4>
-                              <FormattedMessage id="login.title" />
-                          </h4>
+                          <div>
+                              <h4>
+                                  <FormattedMessage id="login.title" />
+                              </h4>
+                          </div>
                       </Modal.Title>
                   </Modal.Header>
                   <Modal.Body>
