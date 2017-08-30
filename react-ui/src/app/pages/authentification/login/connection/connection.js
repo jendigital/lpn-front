@@ -3,7 +3,7 @@ import { Modal, Button, Glyphicon, Form,
   FormGroup, FormControl, Checkbox } from 'react-bootstrap';
 import { FormattedMessage } from 'react-intl';
 import './connection.css';
-import '../../styles/modal.css';
+import '../../modal/modal.css';
 
 const Login =  React.createClass({
 

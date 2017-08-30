@@ -1,4 +1,6 @@
 $dark-grey-blue: #5B6774;
+$dark-blue:      #304254;
+$dark-green:     #276A54;
 $light-green:    #8FC286;
 
 .modal {
@@ -6,7 +8,7 @@ $light-green:    #8FC286;
     .modal-dialog {
         margin: auto;
         width: 325px;
-        
+
         @media (min-width: 768px) {
             width: 400px;
         }
@@ -176,6 +178,40 @@ $light-green:    #8FC286;
             &.left, &.right {
                 background-color: $dark-grey-blue;
             }
+        }
+    }
+
+    .toaster {
+        padding: 15px;
+        border-radius: 4px;
+        position: absolute;
+        bottom: -90px;
+        width: 100%;
+        display: none;
+        color: white;
+
+        .glyphicon-remove {
+            float: right;
+        }
+
+        &.show {
+            display: block;
+        }
+
+        &.info {
+            background-color: $dark-blue;
+        }
+
+        &.warning {
+            background-color: orangered;
+        }
+
+        &.error {
+            background-color: darkred;
+        }
+
+        &.success {
+            background-color: $dark-green;
         }
     }
 }

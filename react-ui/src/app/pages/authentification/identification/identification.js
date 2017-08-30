@@ -11,7 +11,6 @@ import Signup from '../signin/signup/signup';
 
 const Identification = React.createClass({
     getInitialState() {
-        console.log(this.prop);
         if(this.props.location.pathname === "/login")
             return { loginShow: true, signinShow: false };
         if(this.props.location.pathname === "/signin")

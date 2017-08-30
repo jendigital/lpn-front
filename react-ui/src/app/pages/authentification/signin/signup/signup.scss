@@ -1,19 +1,21 @@
-.modal-content #subscription {
-    .modal-body {
-        #birth, #date {
-            display: inline-block;
+.modal-content {
+    #subscription {
+        .modal-body {
+            #birth, #date {
+                display: inline-block;
+            }
+
+            #birth {
+                width: 25%;
+            }
+
+            #date {
+                width: 75%;
+            }
         }
 
-        #birth {
-            width: 25%;
+        .modal-footer {
+            text-align: center;
         }
-
-        #date {
-            width: 75%;
-        }
-    }
-
-    .modal-footer {
-        text-align: center;
     }
 }
