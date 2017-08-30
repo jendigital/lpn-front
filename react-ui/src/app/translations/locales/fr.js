@@ -48,7 +48,7 @@ const messages = {
   "signin_err.lastname":        "Le nom doit être renseigné ou semble incorrect.",
   "signin_err.gender":          "Le sexe doit être renseigné.",
   "signin_err.date":            "Veuillez renseigner votre date de naissance.",
-  "signin_err.legaldate":       "Vous devez avoir 14ans minimum ou la date de naissance n'est pas cohérente.",
+  "signin_err.legaldate":       "Vous devez avoir 14 ans minimum ou la date de naissance n'est pas cohérente.",
   "signin_err.country":         "Sélectionnez votre Pays.",
   "signin_err.city":            "Votre ville doit-être renseignée ou semble incorrect.",
   "signin_err.form":            "Tous les champs sont obligatoires.",

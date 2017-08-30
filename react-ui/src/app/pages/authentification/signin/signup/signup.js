@@ -114,7 +114,7 @@ const SignUp =  React.createClass({
         $('.toaster').removeClass('show');
 
         if (date_select && legal_date && country_select && city_match) {
-            this.props.history.push('/home');
+            this.props.onHide();
         } else {
             if(!date_select) {
                 $('#date_select').addClass('show');
