@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './forgot-pwd.css';
 
-const ForgotPwd =  React.createClass({
+class ForgotPwd extends Component {
     render() {
         return (
             <div id="forgot-pwd">
                 Vous avez oubliez votre mot de passe?
             </div>
-        );
+        )
     }
-});
+}
 
-export default ForgotPwd;
+export default ForgotPwd

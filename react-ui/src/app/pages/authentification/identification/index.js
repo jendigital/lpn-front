@@ -1,46 +1,52 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Button } from 'react-bootstrap';
 import { FormattedMessage } from 'react-intl';
-import { Route } from 'react-router-dom';
-import { BrowserRouter, Link } from 'react-router-dom';
-import { ModalContainer, ModalRoute } from 'react-router-modal';
 import $ from 'jquery';
-import './identification.css';
+import './index.css';
 
-import Login from '../login/connection/connection';
-import Signup from '../signin/signup/signup';
+import Login from '../modal/login/index';
+import Signin from '../modal/signin/index';
 
-const Identification = React.createClass({
-    getInitialState() {
-        if(this.props.location.pathname === "/login")
-            return { loginShow: true, signinShow: false };
-        if(this.props.location.pathname === "/signin")
-            return { loginShow: false, signinShow: true };
-        return { loginShow: false, signinShow: false };
-    },
+class Identification extends Component {
+    constructor(props) {
+        super(props);
+
+        this.loginShow    = this.loginShow.bind(this);
+        this.signinShow   = this.signinShow.bind(this);
+        this.loginClose   = this.loginClose.bind(this);
+        this.signinClose  = this.signinClose.bind(this);
+
+        if(props.history.location.pathname === '/login') {
+            this.state = ({login:true, signin:false});
+            return;
+        }
+
+        if(props.history.location.pathname === '/signin') {
+            this.state = ({login:false, signin:true});
+            return;
+        }
+
+        this.state = ({login:false, signin:false});
+    }
 
     loginShow() {
-        this.setState({ loginShow: true });
-        this.props.history.push("/login");
-    },
+        this.props.history.push('/login');
+    }
 
     signinShow() {
-        this.setState({ signinShow: true });
-        this.props.history.push("/signin");
-    },
+        this.props.history.push('/signin');
+    }
 
     loginClose() {
-        this.setState({ loginShow: false });
-        this.props.history.push("/");
-    },
+        this.props.history.push('/');
+    }
 
     signinClose() {
         $('.toaster').removeClass('show');
-        this.setState({ signinShow: false });
-        this.props.history.push("/");
-    },
+        this.props.history.push('/');
+    }
 
-    render: function() {
+    render() {
         return (
             <div id="identification">
                 <div id="connection">
@@ -63,11 +69,11 @@ const Identification = React.createClass({
                     <FormattedMessage id="policy.register" />
                     <FormattedMessage id="policy.brand" />
                 </p>
-                <Login show={this.state.loginShow} onHide={this.loginClose} />
-                <Signup show={this.state.signinShow} onHide={this.signinClose} />
+                <Login show={this.state.login} onHide={this.loginClose} />
+                <Signin show={this.state.signin} onHide={this.signinClose} />
             </div>
-        );
+        )
     }
-});
+}
 
 export default Identification;

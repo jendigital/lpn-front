@@ -1,14 +1,14 @@
-import React from 'react';
-import './reset.css';
+import React, { Component } from 'react'
+import './reset.css'
 
-const Reset =  React.createClass({
+class Reset extends Component {
     render() {
         return (
             <div id="forgot-pwd">
                 Un mail vous a été renvoyé
             </div>
-        );
+        )
     }
-});
+}
 
-export default Reset;
+export default Reset

@@ -1,15 +1,14 @@
-import React from 'react';
-import { Modal, Button, Glyphicon, Form,
+import React, { Component } from 'react';
+import { Modal, Button, Form,
   FormGroup, FormControl, Checkbox } from 'react-bootstrap';
 import { FormattedMessage } from 'react-intl';
-import './connection.css';
-import '../../modal/modal.css';
+import './index.css';
+import '../modal.css';
 
-const Login =  React.createClass({
+class Login extends Component {
 
     submit() {
-        this.context.router.push('/home');
-    },
+    }
 
     render() {
         return (
@@ -44,8 +43,8 @@ const Login =  React.createClass({
                   </Modal.Footer>
               </div>
           </Modal>
-        );
+        )
     }
-});
+}
 
-export default Login;
+export default Login

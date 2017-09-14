@@ -7,49 +7,49 @@ const Menu = () => {
     return (
         <div id="header">
             <LinkContainer to="/">
-                <img id="logo" src="https://storage.googleapis.com/life-personal-network/commun/logo.png" />
+                <img id="logo" alt="life" src="https://storage.googleapis.com/life-personal-network/commun/logo.png" />
             </LinkContainer>
             <ul id="menu">
                 <li>
                     <LinkContainer to="/">
-                        <img src="https://storage.googleapis.com/life-personal-network/commun/menu/myStory.png" />
-                        <img src="https://storage.googleapis.com/life-personal-network/commun/menu/myStoryBack.png" />
+                        <img alt="myStory" src="https://storage.googleapis.com/life-personal-network/commun/menu/myStory.png" />
+                        <img alt="myStory" src="https://storage.googleapis.com/life-personal-network/commun/menu/myStoryBack.png" />
                     </LinkContainer>
                 </li>
                 <li>
                     <LinkContainer to="/">
-                        <img src="https://storage.googleapis.com/life-personal-network/commun/menu/myTrip.png" />
-                        <img src="https://storage.googleapis.com/life-personal-network/commun/menu/myTripBack.png" />
+                        <img alt="myTrip" src="https://storage.googleapis.com/life-personal-network/commun/menu/myTrip.png" />
+                        <img alt="myTrip" src="https://storage.googleapis.com/life-personal-network/commun/menu/myTripBack.png" />
                     </LinkContainer>
                 </li>
                 <li>
                     <LinkContainer to="/">
-                        <img src="https://storage.googleapis.com/life-personal-network/commun/menu/myFriends.png" />
-                        <img src="https://storage.googleapis.com/life-personal-network/commun/menu/myFriendsBack.png" />
+                        <img alt="myFriends" src="https://storage.googleapis.com/life-personal-network/commun/menu/myFriends.png" />
+                        <img alt="myFriends" src="https://storage.googleapis.com/life-personal-network/commun/menu/myFriendsBack.png" />
                     </LinkContainer>
                 </li>
                 <li>
                     <LinkContainer to="/">
-                        <img src="https://storage.googleapis.com/life-personal-network/commun/menu/myLife.png" />
-                        <img src="https://storage.googleapis.com/life-personal-network/commun/menu/myLifeBack.png" />
+                        <img alt="myLife" src="https://storage.googleapis.com/life-personal-network/commun/menu/myLife.png" />
+                        <img alt="myLife" src="https://storage.googleapis.com/life-personal-network/commun/menu/myLifeBack.png" />
                     </LinkContainer>
                 </li>
                 <li>
                     <LinkContainer to="/">
-                        <img src="https://storage.googleapis.com/life-personal-network/commun/menu/myPics.png" />
-                        <img src="https://storage.googleapis.com/life-personal-network/commun/menu/myPicsBack.png" />
+                        <img alt="myPics" src="https://storage.googleapis.com/life-personal-network/commun/menu/myPics.png" />
+                        <img alt="myPics" src="https://storage.googleapis.com/life-personal-network/commun/menu/myPicsBack.png" />
                     </LinkContainer>
                 </li>
                 <li>
                     <LinkContainer to="/">
-                        <img src="https://storage.googleapis.com/life-personal-network/commun/menu/myPage.png" />
-                        <img src="https://storage.googleapis.com/life-personal-network/commun/menu/myPageBack.png" />
+                        <img alt="myPage" src="https://storage.googleapis.com/life-personal-network/commun/menu/myPage.png" />
+                        <img alt="myPage" src="https://storage.googleapis.com/life-personal-network/commun/menu/myPageBack.png" />
                     </LinkContainer>
                 </li>
                 <li>
                     <LinkContainer to="/">
-                        <img src="https://storage.googleapis.com/life-personal-network/commun/menu/myProfile.png" />
-                        <img src="https://storage.googleapis.com/life-personal-network/commun/menu/myProfileBack.png" />
+                        <img alt="myProfile" src="https://storage.googleapis.com/life-personal-network/commun/menu/myProfile.png" />
+                        <img alt="myProfile" src="https://storage.googleapis.com/life-personal-network/commun/menu/myProfileBack.png" />
                     </LinkContainer>
                 </li>
             </ul>

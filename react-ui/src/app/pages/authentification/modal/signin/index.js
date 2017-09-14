@@ -1,16 +1,17 @@
-import React from 'react';
+import React, { Component } from 'react'
 import { Modal, Button, Glyphicon, Form,
-  FormGroup, FormControl } from 'react-bootstrap';
-import { FormattedMessage } from 'react-intl';
-import $ from 'jquery';
+  FormGroup, FormControl } from 'react-bootstrap'
+import { FormattedMessage } from 'react-intl'
+import $ from 'jquery'
 
-import './signup.css';
-import '../../modal/modal.css';
+import './index.css'
+import '../modal.css'
 
 let step = 1;
 
-const SignUp =  React.createClass({
-    prevStep: function() {
+class SignUp extends Component {
+
+    prevStep() {
         $('.toaster').removeClass('show');
 
         if(step === 3) {
@@ -32,13 +33,13 @@ const SignUp =  React.createClass({
             $('.modal-footer').removeClass('nextStep');
             step --;
         }
-    },
+    }
 
-    nextStep: function() {
+    nextStep() {
         $('.toaster').removeClass('show');
 
         if(step === 1) {
-            let email_regex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,}$/;
+            let email_regex = /^[\w-_.]+@([\w-_.]+\.)+[\w-]{2,}$/;
             let pwd_regex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,15}$/;
             let email_match = email_regex.test($('#Email').val());
             let pwd_match = pwd_regex.test($('#Password').val());
@@ -100,15 +101,15 @@ const SignUp =  React.createClass({
                 }
             }
         }
-    },
+    }
 
-    submit: function() {
+    submit() {
         let date_regex = /^[0-9]{4}[-][0-9]{2}[-][0-9]{2}$/;
         let date_select = date_regex.test($('#Birthdate').val());
         let date = $('#Birthdate').val().split("-");
         let age = new Date().getFullYear() - date[0];
         let legal_date = age >= 14 && age <= 120 ;
-        let country_select = $('#Country').val() != 'Veuillez sélectionnez votre Pays';
+        let country_select = $('#Country').val() !== 'Veuillez sélectionnez votre Pays';
         let city_regex = /[A-Z][a-z]+/;
         let city_match = city_regex.test($('#City').val());
         $('.toaster').removeClass('show');
@@ -136,11 +137,11 @@ const SignUp =  React.createClass({
                 return;
             }
         }
-    },
+    }
 
-    offAlerts: function() {
+    offAlerts() {
         $('.toaster').removeClass('show');
-    },
+    }
 
     render() {
         return (
@@ -282,8 +283,8 @@ const SignUp =  React.createClass({
                   <span className="glyphicon glyphicon-remove" />
               </div>
           </Modal>
-        );
+        )
     }
-});
+}
 
-export default SignUp;
+export default SignUp
