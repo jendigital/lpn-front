@@ -2,6 +2,8 @@ $dark-grey-blue: #5B6774;
 $dark-blue:      #304254;
 $dark-green:     #276A54;
 $light-green:    #8FC286;
+$orange-red:     #DB6962;
+$light-green:    #8FC286;
 
 .modal {
     display: flex !important;
@@ -149,6 +151,13 @@ $light-green:    #8FC286;
                     border-radius: 0;
                 }
             }
+
+            button {
+                &.submit {
+                    background-color: $light-green;
+                    width: 100%;
+                }
+            }
         }
     }
 
@@ -177,6 +186,11 @@ $light-green:    #8FC286;
 
             &.left, &.right {
                 background-color: $dark-grey-blue;
+            }
+
+            &.cancel {
+                color: white;
+                background-color: $orange-red;
             }
         }
     }

@@ -69,8 +69,8 @@ class Identification extends Component {
                     <FormattedMessage id="policy.register" />
                     <FormattedMessage id="policy.brand" />
                 </p>
-                <Login show={this.state.login} onHide={this.loginClose} />
-                <Signin show={this.state.signin} onHide={this.signinClose} />
+                <Login identification={this.props} show={this.state.login} onHide={this.loginClose} />
+                <Signin subscription={this.props} show={this.state.signin} onHide={this.signinClose} />
             </div>
         )
     }

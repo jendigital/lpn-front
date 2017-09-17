@@ -6,13 +6,23 @@ import $ from 'jquery'
 
 import './index.css'
 import '../modal.css'
+import SigninError from '../subscription_error'
 
 let step = 1;
 
-class SignUp extends Component {
+class Signin extends Component {
+
+    constructor(props) {
+        super(props);
+
+        this.prevStep       = this.prevStep.bind(this);
+        this.nextStep       = this.nextStep.bind(this);
+        this.submit         = this.submit.bind(this);
+        this.offAlerts      = this.offAlerts.bind(this);
+    }
 
     prevStep() {
-        $('.toaster').removeClass('show');
+        $('.toaster').hide();
 
         if(step === 3) {
             $('.progress').removeClass('lastStep');
@@ -36,7 +46,7 @@ class SignUp extends Component {
     }
 
     nextStep() {
-        $('.toaster').removeClass('show');
+        $('.toaster').hide();
 
         if(step === 1) {
             let email_regex = /^[\w-_.]+@([\w-_.]+\.)+[\w-]{2,}$/;
@@ -55,24 +65,23 @@ class SignUp extends Component {
                 $('.modal-footer').addClass('nextStep');
                 step ++;
             } else {
-                console.log(pwd_match);
                 if(!email_match){
-                    $('#email_match').addClass('show');
+                    $('#email_match').show();
                     return;
                 }
 
                 if(!pwd_match) {
-                    $('#pwd_match').addClass('show');
+                    $('#pwd_match').show();
                     return;
                 }
 
                 if(!pwd_confirm) {
-                    $('#pwd_confirm').addClass('show');
+                    $('#pwd_confirm').show();
                     return;
                 }
             }
         } else if(step === 2) {
-            let name_regex = /[A-Z][a-z]+/;
+            let name_regex = /[A-Za-z]{2,}/;
             let lastname_match = name_regex.test($('#Name').val());
             let firstname_match = name_regex.test($('#Firstname').val());
             let gender_select = $('#Gender').val() === 'male' || $('#Gender').val() === 'female';
@@ -88,15 +97,15 @@ class SignUp extends Component {
                 step ++;
             } else {
                 if(!lastname_match) {
-                    $('#lastname_match').addClass('show');
+                    $('#lastname_match').show();
                     return;
                 }
                 if(!firstname_match) {
-                    $('#firstname_match').addClass('show');
+                    $('#firstname_match').show();
                     return;
                 }
                 if(!gender_select) {
-                    $('#gender_select').addClass('show');
+                    $('#gender_select').show();
                     return;
                 }
             }
@@ -110,37 +119,37 @@ class SignUp extends Component {
         let age = new Date().getFullYear() - date[0];
         let legal_date = age >= 14 && age <= 120 ;
         let country_select = $('#Country').val() !== 'Veuillez sélectionnez votre Pays';
-        let city_regex = /[A-Z][a-z]+/;
+        let city_regex = /[A-Za-z]{2,}/;
         let city_match = city_regex.test($('#City').val());
         $('.toaster').removeClass('show');
 
         if (date_select && legal_date && country_select && city_match) {
-            this.props.onHide();
+            this.props.subscription.history.push('/home');
         } else {
             if(!date_select) {
-                $('#date_select').addClass('show');
+                $('#date_select').show();
                 return;
             }
 
             if(!legal_date){
-                $('#legal_date').addClass('show');
+                $('#legal_date').show();
                 return;
             }
 
             if(!country_select) {
-                $('#country_select').addClass('show');
+                $('#country_select').show();
                 return;
             }
 
             if(!city_match) {
-                $('#city_match').addClass('show');
+                $('#city_match').show();
                 return;
             }
         }
     }
 
     offAlerts() {
-        $('.toaster').removeClass('show');
+        $('.toaster').hide();
     }
 
     render() {
@@ -235,56 +244,13 @@ class SignUp extends Component {
                   <Modal.Footer className="firstStep">
                       <Button onClick={this.prevStep} className="left"><Glyphicon glyph="chevron-left" /></Button>
                       <Button onClick={this.nextStep} className="right"><Glyphicon glyph="chevron-right" /></Button>
-                      <Button onClick={this.submit} className="ok"><Glyphicon glyph="ok" /></Button>
+                      <Button onClick={this.submit} type="submit" className="ok"><Glyphicon glyph="ok" /></Button>
                   </Modal.Footer>
               </div>
-              <div className="toaster info" id="email_match" onClick={this.offAlerts} >
-                  <FormattedMessage id="signin_err.email" />
-                  <span className="glyphicon glyphicon-remove" />
-              </div>
-              <div className="toaster error" id="pwd_match" onClick={this.offAlerts} >
-                  <FormattedMessage id="signin_err.pwd" />
-                  <span className="glyphicon glyphicon-remove" />
-              </div>
-              <div className="toaster warning" id="pwd_confirm" onClick={this.offAlerts} >
-                  <FormattedMessage id="signin_err.confirm" />
-                  <span className="glyphicon glyphicon-remove" />
-              </div>
-              <div className="toaster info" id="lastname_match" onClick={this.offAlerts} >
-                  <FormattedMessage id="signin_err.lastname" />
-                  <span className="glyphicon glyphicon-remove" />
-              </div>
-              <div className="toaster info" id="firstname_match" onClick={this.offAlerts} >
-                  <FormattedMessage id="signin_err.firstname" />
-                  <span className="glyphicon glyphicon-remove" />
-              </div>
-              <div className="toaster info" id="gender_select" onClick={this.offAlerts} >
-                  <FormattedMessage id="signin_err.gender" />
-                  <span className="glyphicon glyphicon-remove" />
-              </div>
-              <div className="toaster warning" id="date_select" onClick={this.offAlerts} >
-                  <FormattedMessage id="signin_err.date" />
-                  <span className="glyphicon glyphicon-remove" />
-              </div>
-              <div className="toaster warning" id="legal_date" onClick={this.offAlerts} >
-                  <FormattedMessage id="signin_err.legaldate" />
-                  <span className="glyphicon glyphicon-remove" />
-              </div>
-              <div className="toaster info" id="country_select" onClick={this.offAlerts} >
-                  <FormattedMessage id="signin_err.country" />
-                  <span className="glyphicon glyphicon-remove" />
-              </div>
-              <div className="toaster info" id="city_match" onClick={this.offAlerts} >
-                  <FormattedMessage id="signin_err.city" />
-                  <span className="glyphicon glyphicon-remove" />
-              </div>
-              <div className="toaster error" id="fill_field" onClick={this.offAlerts} >
-                  <FormattedMessage id="signin_err.form" />
-                  <span className="glyphicon glyphicon-remove" />
-              </div>
+              <SigninError />
           </Modal>
         )
     }
 }
 
-export default SignUp
+export default Signin

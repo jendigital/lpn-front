@@ -1,25 +1,28 @@
-$orange-red: #DB6962;
-$light-green: #8FC286;
 $dark-grey-blue: #5B6774;
 
-.modal-content #connection {
-    #connect {
-        background-color: $light-green;
-        width: 100%
-    }
-
-
+.modal-content #login {
     .modal-footer {
         text-align: left;
-
-        #cancel {
-            color: white;
-            background-color: $orange-red;
-        }
 
         a {
             float: right;
             color: $dark-grey-blue;
         }
+    }
+
+    #login_error {
+        display: none;
+    }
+}
+
+.modal-content #reset {
+    display: none;
+
+    #nonexistent {
+        display: none;
+    }
+
+    #sendemail {
+        display: none;
     }
 }
