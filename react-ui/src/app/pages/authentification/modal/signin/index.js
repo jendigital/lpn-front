@@ -8,13 +8,12 @@ import './index.css'
 import '../modal.css'
 import SigninError from '../subscription_error'
 
-let step = 1;
-
 class Signin extends Component {
 
     constructor(props) {
         super(props);
 
+        this.step           = 1;
         this.prevStep       = this.prevStep.bind(this);
         this.nextStep       = this.nextStep.bind(this);
         this.submit         = this.submit.bind(this);
@@ -24,7 +23,7 @@ class Signin extends Component {
     prevStep() {
         $('.toaster').hide();
 
-        if(step === 3) {
+        if(this.step === 3) {
             $('.progress').removeClass('lastStep');
             $('.progress').addClass('nextStep');
             $('.modal-header').removeClass('lastStep');
@@ -32,8 +31,8 @@ class Signin extends Component {
             $('.modal-body').removeClass('lastStep');
             $('.modal-body').addClass('nextStep');
             $('.modal-footer').removeClass('lastStep');
-            step --;
-        } else if (step === 2) {
+            this.step --;
+        } else if (this.step === 2) {
             $('.progress').removeClass('nextStep');
             $('.progress').addClass('firstStep');
             $('.modal-header').removeClass('nextStep');
@@ -41,14 +40,14 @@ class Signin extends Component {
             $('.modal-body').removeClass('nextStep');
             $('.modal-body').addClass('firstStep');
             $('.modal-footer').removeClass('nextStep');
-            step --;
+            this.step --;
         }
     }
 
     nextStep() {
         $('.toaster').hide();
 
-        if(step === 1) {
+        if(this.step === 1) {
             let email_regex = /^[\w-_.]+@([\w-_.]+\.)+[\w-]{2,}$/;
             let pwd_regex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,15}$/;
             let email_match = email_regex.test($('#Email').val());
@@ -63,7 +62,7 @@ class Signin extends Component {
                 $('.modal-body').addClass('nextStep');
                 $('.modal-body').removeClass('firstStep');
                 $('.modal-footer').addClass('nextStep');
-                step ++;
+                this.step ++;
             } else {
                 if(!email_match){
                     $('#email_match').show();
@@ -80,7 +79,7 @@ class Signin extends Component {
                     return;
                 }
             }
-        } else if(step === 2) {
+        } else if(this.step === 2) {
             let name_regex = /[A-Za-z]{2,}/;
             let lastname_match = name_regex.test($('#Name').val());
             let firstname_match = name_regex.test($('#Firstname').val());
@@ -94,7 +93,7 @@ class Signin extends Component {
                 $('.modal-body').addClass('lastStep');
                 $('.modal-body').removeClass('nextStep');
                 $('.modal-footer').addClass('lastStep');
-                step ++;
+                this.step ++;
             } else {
                 if(!lastname_match) {
                     $('#lastname_match').show();
@@ -242,9 +241,9 @@ class Signin extends Component {
                       </Form>
                   </Modal.Body>
                   <Modal.Footer className="firstStep">
-                      <Button onClick={this.prevStep} className="left"><Glyphicon glyph="chevron-left" /></Button>
-                      <Button onClick={this.nextStep} className="right"><Glyphicon glyph="chevron-right" /></Button>
-                      <Button onClick={this.submit} type="submit" className="ok"><Glyphicon glyph="ok" /></Button>
+                      <Button onClick={this.prevStep} type="button" className="left"><Glyphicon glyph="chevron-left" /></Button>
+                      <Button onClick={this.nextStep} type="button" className="right"><Glyphicon glyph="chevron-right" /></Button>
+                      <Button onClick={this.submit} type="button" className="ok"><Glyphicon glyph="ok" /></Button>
                   </Modal.Footer>
               </div>
               <SigninError />
