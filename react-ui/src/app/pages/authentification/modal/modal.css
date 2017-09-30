@@ -60,7 +60,7 @@
     text-align: center;
     padding: 5px;
     border-bottom: 0;
-    margin-bottom: 60px; }
+    margin-bottom: 30px; }
     .modal-content .modal-header .registration, .modal-content .modal-header .signin, .modal-content .modal-header .details {
       display: none;
       font-weight: normal;
@@ -95,7 +95,7 @@
   .modal-content .modal-footer {
     border-top: 0;
     padding-top: 0;
-    margin-top: 70px; }
+    margin-top: 40px; }
     .modal-content .modal-footer button.left, .modal-content .modal-footer button.right, .modal-content .modal-footer button.ok {
       display: none; }
     .modal-content .modal-footer.firstStep button.right, .modal-content .modal-footer.nextStep button.left, .modal-content .modal-footer.lastStep button.ok {

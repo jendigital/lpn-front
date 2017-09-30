@@ -219,7 +219,7 @@ class Signin extends Component {
                           <div className="details">
                               <FormGroup controlId="Birthdate">
                                   <div id="birth">
-                                      Date de naissance
+                                      <FormattedMessage id="subscription.birth" />
                                   </div>
                                   <div id="date">
                                       <FormControl type="Date" />
@@ -237,6 +237,9 @@ class Signin extends Component {
                               <FormGroup controlId="City">
                                   <FormControl type="text" placeholder="Ville" />
                               </FormGroup>
+                              <div id="conditions">
+                                  <FormattedMessage id="subscription.conditions" />
+                              </div>
                           </div>
                       </Form>
                   </Modal.Body>

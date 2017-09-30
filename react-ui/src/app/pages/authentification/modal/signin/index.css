@@ -7,5 +7,15 @@
 .modal-content #subscription .modal-body #date {
   width: 75%; }
 
+.modal-content #subscription .modal-body #conditions {
+  margin-top: 30px;
+  font-size: 10px;
+  padding: 10px;
+  border-top: #304254 1px solid;
+  border-bottom: #304254 1px solid; }
+  .modal-content #subscription .modal-body #conditions span {
+    padding-top: 10px;
+    padding-bottom: 10px; }
+
 .modal-content #subscription .modal-footer {
   text-align: center; }

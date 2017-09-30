@@ -33,9 +33,7 @@ const messages = {
   "subscription.select":        "Sélectionnez votre pays",
   "subscription.location":      "Ville",
   "subscription.illustration":  "Avatar",
-  "subscription.conditions":    "En soumettant ce formulaire, vous acceptez les ",
-  "subscription.conditions2":   "et vous certifiez avoir lu les",
-  "subscription.cookie":        "comprenant l'usage de cookie.",
+  "subscription.conditions":    "En soumettant ce formulaire, vous acceptez les Conditions d'utilisations et déclarez les avoir lues et pris connaissance ainsi que l'utilisation de cookies.",
 
   "signin_err.email":           "Votre email doit-être renseigné ou semble incorrect.",
   "signin_err.pwd":             "Votre mot de passe doit contenir au moins 8 caractères, 15 max, une lettre, une majuscule et un chiffre.",

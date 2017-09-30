@@ -1,3 +1,5 @@
+$dark-blue:      #304254;
+
 .modal-content {
     #subscription {
         .modal-body {
@@ -11,6 +13,19 @@
 
             #date {
                 width: 75%;
+            }
+
+            #conditions {
+                margin-top: 30px;
+                font-size: 10px;
+                padding: 10px;
+                border-top: $dark-blue 1px solid;
+                border-bottom: $dark-blue 1px solid;
+
+                span {
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                }
             }
         }
 
