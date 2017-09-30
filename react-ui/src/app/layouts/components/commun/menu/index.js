@@ -15,50 +15,50 @@ class Menu extends Component {
     render() {
         return (
             <div id='header'>
-                <a href='#'>
+                <a href='Home'>
                     <div className='logo_container'>
                         <img className='logo' alt='Life' src='https://storage.googleapis.com/life-personal-network/commun/life.png' />
                     </div>
                 </a>
                 <ul id='menu'>
                     <li>
-                        <a href='#'>
+                        <a href='myStory'>
                             <img alt='myStory' src='https://storage.googleapis.com/life-personal-network/commun/menu/myStory.png' />
                             <img alt='myStory' src='https://storage.googleapis.com/life-personal-network/commun/menu/myStoryBack.png' />
                         </a>
                     </li>
                     <li>
-                        <a href='#'>
+                        <a href='myTrip'>
                             <img alt='myTrip' src='https://storage.googleapis.com/life-personal-network/commun/menu/myTrip.png' />
                             <img alt='myTrip' src='https://storage.googleapis.com/life-personal-network/commun/menu/myTripBack.png' />
                         </a>
                     </li>
                     <li>
-                        <a href='#'>
+                        <a href='myFriends'>
                             <img alt='myFriends' src='https://storage.googleapis.com/life-personal-network/commun/menu/myFriends.png' />
                             <img alt='myFriends' src='https://storage.googleapis.com/life-personal-network/commun/menu/myFriendsBack.png' />
                         </a>
                     </li>
                     <li>
-                        <a to='#'>
+                        <a to='myLife'>
                             <img alt='myLife' src='https://storage.googleapis.com/life-personal-network/commun/menu/myLife.png' />
                             <img alt='myLife' src='https://storage.googleapis.com/life-personal-network/commun/menu/myLifeBack.png' />
                         </a>
                     </li>
                     <li>
-                        <a href='#'>
+                        <a href='myPics'>
                             <img alt='myPics' src='https://storage.googleapis.com/life-personal-network/commun/menu/myPics.png' />
                             <img alt='myPics' src='https://storage.googleapis.com/life-personal-network/commun/menu/myPicsBack.png' />
                         </a>
                     </li>
                     <li>
-                        <a href='#'>
+                        <a href='myPage'>
                             <img alt='myPage' src='https://storage.googleapis.com/life-personal-network/commun/menu/myPage.png' />
                             <img alt='myPage' src='https://storage.googleapis.com/life-personal-network/commun/menu/myPageBack.png' />
                         </a>
                     </li>
                     <li>
-                        <a href='#'>
+                        <a href='myProfile'>
                             <img alt='myProfile' src='https://storage.googleapis.com/life-personal-network/commun/menu/myProfile.png' />
                             <img alt='myProfile' src='https://storage.googleapis.com/life-personal-network/commun/menu/myProfileBack.png' />
                         </a>
@@ -77,7 +77,7 @@ class Menu extends Component {
                             </a>
                         </li>
                         <li>
-                            <a href='#' onClick={this.signOut}>
+                            <a href='login' onClick={this.signOut}>
                                 <Icon name='sign-out' />
                             </a>
                         </li>

@@ -1,0 +1,19 @@
+$dark-blue:         #304254;
+$screen-md-min:     992px;
+
+#welcome {
+    margin: auto;
+
+    h3, h4 {
+        color: $dark-blue;
+        font-weight: 400;
+    }
+
+    h3 {
+        margin-bottom: 40px;
+    }
+
+    .firstname {
+        color: #EB8265;
+    }
+}

@@ -36,7 +36,7 @@ class MobileMenu extends Component {
                         <Navbar.Toggle onClick={this.hideConfig} />
                         <Navbar.Brand>
                             <div className='mobile_menu_bar' onMouseOver={this.hideConfig}>
-                                <a href='#'>
+                                <a href='Home'>
                                     <img alt='life' className='logo' src='https://storage.googleapis.com/life-personal-network/commun/life.png' />
                                 </a>
                             </div>
@@ -73,19 +73,19 @@ class MobileMenu extends Component {
                     <Navbar.Collapse>
                         <div className="menu_icons">
                             <div className='icons'>
-                                <a href='#'>
+                                <a href='myStory'>
                                     <div>
                                         <img alt='myStory' src='https://storage.googleapis.com/life-personal-network/commun/menu/myStory.png' />
                                     </div>
                                     <FormattedMessage id="menu.myStory" />
                                 </a>
-                                <a href='#'>
+                                <a href='myTrip'>
                                     <div>
                                         <img alt='myTrip' src='https://storage.googleapis.com/life-personal-network/commun/menu/myTrip.png' />
                                     </div>
                                     <FormattedMessage id="menu.myTrip" />
                                 </a>
-                                <a href='#'>
+                                <a href='myFriends'>
                                     <div>
                                         <img alt='myFriends' className='last-one' src='https://storage.googleapis.com/life-personal-network/commun/menu/myFriends.png' />
                                     </div>
@@ -93,19 +93,19 @@ class MobileMenu extends Component {
                                 </a>
                             </div>
                             <div className='icons'>
-                                <a href='#'>
+                                <a href='myPics'>
                                     <div>
                                         <img alt='myPics' src='https://storage.googleapis.com/life-personal-network/commun/menu/myPics.png' />
                                     </div>
                                     <FormattedMessage id="menu.myPics" />
                                 </a>
-                                <a href='#'>
+                                <a href='myLife'>
                                     <div>
                                         <img alt='myLife' src='https://storage.googleapis.com/life-personal-network/commun/menu/myLife.png' />
                                     </div>
                                     <FormattedMessage id="menu.myLife" />
                                 </a>
-                                <a href='#'>
+                                <a href='myPage'>
                                     <div>
                                         <img alt='myPage' className='last-one' src='https://storage.googleapis.com/life-personal-network/commun/menu/myPage.png' />
                                     </div>
@@ -113,7 +113,7 @@ class MobileMenu extends Component {
                                 </a>
                             </div>
                             <div className='icons'>
-                                <a href='#'>
+                                <a href='myProfile'>
                                     <div>
                                         <img alt='myProfile' src='https://storage.googleapis.com/life-personal-network/commun/menu/myProfile.png' />
                                     </div>
