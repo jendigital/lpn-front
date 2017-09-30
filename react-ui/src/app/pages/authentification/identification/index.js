@@ -52,11 +52,11 @@ class Identification extends Component {
                 <div id="connection">
                     <img src='https://storage.googleapis.com/life-personal-network/commun/logo.png' alt="logo" />
                     <div>
-                        <Button onClick={this.loginShow}>
-                            <FormattedMessage id="identification.login" />
-                        </Button>
                         <Button onClick={this.signinShow}>
                             <FormattedMessage id="identification.signup" />
+                        </Button>
+                        <Button onClick={this.loginShow}>
+                            <FormattedMessage id="identification.login" />
                         </Button>
                     </div>
                 </div>
@@ -65,8 +65,8 @@ class Identification extends Component {
                     <a><FormattedMessage id="policy.legal" /></a>
                     <a><FormattedMessage id="policy.cookies" /></a>
                     <FormattedMessage id="policy.languages" />
-                    <span className="languages"><FormattedMessage id="policy.french" /></span>
                     <FormattedMessage id="policy.register" />
+                    <img src='https://storage.googleapis.com/life-personal-network/identification/switzerland.png' />
                     <FormattedMessage id="policy.brand" />
                 </p>
                 <Login identification={this.props} show={this.state.login} onHide={this.loginClose} />

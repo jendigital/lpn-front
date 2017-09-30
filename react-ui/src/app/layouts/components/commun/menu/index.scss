@@ -63,7 +63,7 @@ $screen-md-min:     992px;
     }
 
     #settings_container {
-        width: 65px;
+        width: 56px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -83,6 +83,14 @@ $screen-md-min:     992px;
 
         span {
             color: #FFFFFF;
+        }
+
+        .glyphicon {
+            font-size: 13px;
+        }
+
+        .fa {
+            font-size: 15px;
         }
     }
 }

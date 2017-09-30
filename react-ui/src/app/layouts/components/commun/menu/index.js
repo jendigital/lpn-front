@@ -1,8 +1,17 @@
 import React, { Component } from 'react';
-
+import { Icon } from 'react-fa';
 import './index.css';
 
 class Menu extends Component {
+    constructor(props) {
+        super(props);
+        this.signOut  = this.signOut.bind(this);
+    }
+
+    signOut() {
+        this.props.navigation.identification.history.push('/login');
+    }
+
     render() {
         return (
             <div id='header'>
@@ -64,12 +73,12 @@ class Menu extends Component {
                         </li>
                         <li>
                             <a href='#'>
-                                <span className='glyphicon glyphicon-question-sign'></span>
+                                <Icon name='question' />
                             </a>
                         </li>
                         <li>
-                            <a href='#'>
-                                <span className='glyphicon glyphicon-log-in'></span>
+                            <a href='#' onClick={this.signOut}>
+                                <Icon name='sign-out' />
                             </a>
                         </li>
                     </ul>

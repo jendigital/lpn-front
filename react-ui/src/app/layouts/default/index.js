@@ -13,8 +13,8 @@ class MainLayout extends Component {
     render() {
         return (
             <div id="layout">
-                <Menu/>
-                <MobileMenu/>
+                <Menu navigation={this.props} />
+                <MobileMenu navigation={this.props} />
                 <div className="content" onClick={this.hideConfig}>
                     {this.props.children}
                 </div>

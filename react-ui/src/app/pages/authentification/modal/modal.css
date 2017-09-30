@@ -113,10 +113,14 @@
     padding: 15px;
     border-radius: 4px;
     position: absolute;
-    bottom: -90px;
+    bottom: -65px;
     width: 100%;
     display: none;
-    color: white; }
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0; }
     .modal-content .toaster .glyphicon-remove {
       float: right; }
     .modal-content .toaster.show {

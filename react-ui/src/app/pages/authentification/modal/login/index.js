@@ -21,9 +21,14 @@ class Login extends Component {
 
     submit() {
         let connect = true;
+        let email_regex = /^[\w-_.]+@([\w-_.]+\.)+[\w-]{2,}$/;
+        let pwd_regex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,15}$/;
+        let email_match = email_regex.test($('#Email').val());
+        let pwd_match = pwd_regex.test($('#Password').val());
 
         this.offAlerts();
-        if(connect) {
+
+        if(connect && email_match && pwd_match) {
             this.props.identification.history.push('/home');
             $('#login_error').hide();
             if($('#remember_me').checked) {

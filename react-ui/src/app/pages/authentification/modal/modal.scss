@@ -201,10 +201,14 @@ $screen-md-min:     992px;
         padding: 15px;
         border-radius: 4px;
         position: absolute;
-        bottom: -90px;
+        bottom: -65px;
         width: 100%;
         display: none;
         color: white;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
 
         .glyphicon-remove {
             float: right;

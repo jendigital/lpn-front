@@ -6,8 +6,8 @@ import Welcome from './components/welcome'
 class Home extends Component {
     render() {
         return (
-            <MainLayout>
-                <Welcome test={true} />
+            <MainLayout identification={this.props}>
+                <Welcome />
             </MainLayout>
         )
     }

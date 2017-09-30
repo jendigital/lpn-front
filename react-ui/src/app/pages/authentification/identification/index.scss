@@ -1,3 +1,5 @@
+$screen-sm-min:     768px;
+
 #identification {
     height: 100vh;
     background: url('https://storage.googleapis.com/life-personal-network/identification/identification.png');
@@ -8,21 +10,27 @@
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
+    display: flex;
+    align-items: flex-end;
 
     #connection {
-        width: 30%;
+        width: 310px;
         margin-left: auto;
         margin-right: auto;
-        padding-top: 70vh;
         text-align: center;
+        margin-bottom: 50px;
 
         img {
-            width: 10%;
+            width: 70px;
+
+            @media(min-width: $screen-sm-min) {
+                width: 100px;
+            }
         }
 
         button {
             font-size: 15px;
-            width: 150px;
+            width: 100px;
             margin-top: 10px;
             margin-bottom: 10px;
             border: 1px solid white;
@@ -30,6 +38,10 @@
             background-color: transparent;
             font-weight: lighter;
             font-family: sans-serif;
+
+            @media(min-width: $screen-sm-min) {
+                width: 150px;
+            }
         }
 
         button.active.focus, button.active:focus, button.focus,
@@ -43,11 +55,26 @@
     }
 
     #notices {
-        font-size: 12px;
+        font-size: 8px;
         color: #fff;
         position: absolute;
         bottom: 0;
-        right: 10px;
+
+
+        @media (min-width: $screen-sm-min) {
+            font-size: 12px;
+            bottom: 0;
+            right: 10px;
+        }
+
+        a, span {
+            margin-left: 5px;
+        }
+
+        img {
+            margin-left: 2px;
+            width: 10px;
+        }
 
         a{
             color: #276A54;

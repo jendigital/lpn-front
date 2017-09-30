@@ -40,7 +40,7 @@
       #header #menu li a:hover img:last-child {
         display: block; }
   #header #settings_container {
-    width: 65px;
+    width: 56px;
     margin-left: auto;
     margin-right: auto; }
   #header #settings {
@@ -53,3 +53,7 @@
       padding-right: 0; }
     #header #settings span {
       color: #FFFFFF; }
+    #header #settings .glyphicon {
+      font-size: 13px; }
+    #header #settings .fa {
+      font-size: 15px; }

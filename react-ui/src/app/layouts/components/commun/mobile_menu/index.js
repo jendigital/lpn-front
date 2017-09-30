@@ -12,6 +12,7 @@ class MobileMenu extends Component {
 
         this.showConfig    = this.showConfig.bind(this);
         this.hideConfig    = this.hideConfig.bind(this);
+        this.signOut  = this.signOut.bind(this);
     }
 
     showConfig() {
@@ -21,6 +22,10 @@ class MobileMenu extends Component {
 
     hideConfig() {
         $('.config').css('display', 'none');
+    }
+
+    signOut() {
+        this.props.navigation.identification.history.push('/login');
     }
 
     render() {
@@ -55,7 +60,7 @@ class MobileMenu extends Component {
                                         </div>
                                         <FormattedMessage id="menu.help" />
                                     </div>
-                                    <div className='line'>
+                                    <div className='line' onClick={this.signOut}>
                                         <div className="logo_settings">
                                             <Icon name='sign-out' />
                                         </div>
