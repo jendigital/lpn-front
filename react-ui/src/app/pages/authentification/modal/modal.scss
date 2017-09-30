@@ -5,13 +5,15 @@ $light-green:    #8FC286;
 $orange-red:     #DB6962;
 $light-green:    #8FC286;
 
+$screen-md-min:     992px;
+
 .modal {
     display: flex !important;
     .modal-dialog {
         margin: auto;
         width: 325px;
 
-        @media (min-width: 768px) {
+        @media (min-width: $screen-md-min) {
             width: 400px;
         }
     }

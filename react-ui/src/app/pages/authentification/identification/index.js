@@ -42,7 +42,7 @@ class Identification extends Component {
     }
 
     signinClose() {
-        $('.toaster').removeClass('show');
+        $('.toaster').show();
         this.props.history.push('/');
     }
 

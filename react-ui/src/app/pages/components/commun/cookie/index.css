@@ -1,0 +1,23 @@
+.toaster {
+  padding: 15px;
+  border-radius: 4px;
+  bottom: 10px;
+  width: 300px;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  color: white;
+  font-weight: 300;
+  font-size: 13px; }
+  @media (min-width: 768px) {
+    .toaster {
+      width: 400px; } }
+  @media (min-width: 992px) {
+    .toaster {
+      left: 100px; } }
+  .toaster.info {
+    background-color: #304254; }
+  .toaster .glyphicon {
+    float: right; }

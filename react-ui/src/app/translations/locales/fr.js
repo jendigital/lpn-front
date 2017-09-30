@@ -1,7 +1,4 @@
 const messages = {
-  "home.welcome": "Bienvenue sur votre réseau personnel!",
-  "home.hello":   "Bonjour",
-
   "noMatch.slogan": "Oups! Cette page n'existe pas, mais peut-on vous proposer des vacances à la place?",
   "noMatch.UnderConstruction": "Cette fonctionnalité du site est en cours de construction.",
 
@@ -66,6 +63,22 @@ const messages = {
   "reset.validate":             "Valider",
   "reset.email":                "Un e-mail a été envoyé à cette adresse pour vous permettre de réinitialisez votre mot de passe.",
   "reset.retry":                "Réessayer",
+
+  "menu.myStory":               "myStory",
+  "menu.myTrip":                "myTrip",
+  "menu.myFriends":             "myFriends",
+  "menu.myPics":                "myPics",
+  "menu.myLife":                "myLife",
+  "menu.myPage":                "myPage",
+  "menu.myProfile":             "myProfile",
+  "menu.settings":              "Réglages",
+  "menu.help":                  "Aide",
+  "menu.disconnect":            "Déconnexion",
+
+  "home.hello":   "Bonjour",
+  "home.welcome": "Bienvenue sur votre réseau personnel.",
+
+  "cookie.info":  "En utilisant ce site, vous acceptez l'utilisation des cookies.",
 
   "myStory.write":              "Ecrire une story",
   "myStory.read":               "Lire votre story",

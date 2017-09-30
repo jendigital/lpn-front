@@ -3,7 +3,7 @@
   .modal .modal-dialog {
     margin: auto;
     width: 325px; }
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
       .modal .modal-dialog {
         width: 400px; } }
 

@@ -20,7 +20,7 @@ class Login extends Component {
     }
 
     submit() {
-        let connect = false;
+        let connect = true;
 
         this.offAlerts();
         if(connect) {
