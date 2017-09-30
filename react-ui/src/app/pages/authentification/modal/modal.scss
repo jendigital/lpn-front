@@ -196,42 +196,4 @@ $screen-md-min:     992px;
             }
         }
     }
-
-    .toaster {
-        padding: 15px;
-        border-radius: 4px;
-        position: absolute;
-        bottom: -65px;
-        width: 100%;
-        display: none;
-        color: white;
-        margin-left: auto;
-        margin-right: auto;
-        left: 0;
-        right: 0;
-
-        .glyphicon-remove {
-            float: right;
-        }
-
-        &.show {
-            display: block;
-        }
-
-        &.info {
-            background-color: $dark-blue;
-        }
-
-        &.warning {
-            background-color: orangered;
-        }
-
-        &.error {
-            background-color: darkred;
-        }
-
-        &.success {
-            background-color: $dark-green;
-        }
-    }
 }
