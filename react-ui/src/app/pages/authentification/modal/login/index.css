@@ -1,0 +1,15 @@
+.modal-content #login .modal-footer {
+  text-align: left; }
+  .modal-content #login .modal-footer a {
+    float: right;
+    color: #5B6774; }
+
+.modal-content #login #login_error {
+  display: none; }
+
+.modal-content #reset {
+  display: none; }
+  .modal-content #reset #nonexistent {
+    display: none; }
+  .modal-content #reset #sendemail {
+    display: none; }

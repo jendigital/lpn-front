@@ -1,0 +1,28 @@
+$dark-grey-blue: #5B6774;
+
+.modal-content #login {
+    .modal-footer {
+        text-align: left;
+
+        a {
+            float: right;
+            color: $dark-grey-blue;
+        }
+    }
+
+    #login_error {
+        display: none;
+    }
+}
+
+.modal-content #reset {
+    display: none;
+
+    #nonexistent {
+        display: none;
+    }
+
+    #sendemail {
+        display: none;
+    }
+}

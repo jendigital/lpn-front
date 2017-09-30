@@ -1,0 +1,111 @@
+.modal {
+  display: flex !important; }
+  .modal .modal-dialog {
+    margin: auto;
+    width: 325px; }
+    @media (min-width: 992px) {
+      .modal .modal-dialog {
+        width: 400px; } }
+
+.modal-content {
+  color: #5B6774;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  border: none !important; }
+  .modal-content .progress {
+    background-color: transparent;
+    text-align: center;
+    padding-top: 20px;
+    height: auto; }
+    .modal-content .progress .circle, .modal-content .progress .bar {
+      display: inline-block;
+      width: 80px;
+      height: 3px;
+      border-left: none;
+      border-right: none;
+      vertical-align: middle; }
+    .modal-content .progress .circle {
+      width: 20px;
+      height: 20px;
+      border-radius: 20px;
+      text-align: center; }
+    .modal-content .progress.firstStep .circle {
+      color: #5B6774;
+      background-color: white; }
+      .modal-content .progress.firstStep .circle:first-child {
+        color: white;
+        background-color: #8FC286; }
+    .modal-content .progress.firstStep .bar {
+      background-color: white; }
+    .modal-content .progress.nextStep .circle {
+      color: white;
+      background-color: #8FC286; }
+      .modal-content .progress.nextStep .circle:last-child {
+        color: #5B6774;
+        background-color: white; }
+    .modal-content .progress.nextStep .bar.next {
+      background-color: #8FC286; }
+    .modal-content .progress.nextStep .bar.last {
+      background-color: white; }
+    .modal-content .progress.lastStep .circle, .modal-content .progress.lastStep .bar {
+      color: white;
+      background-color: #8FC286; }
+  .modal-content button {
+    color: white;
+    border-color: transparent;
+    border-radius: 0; }
+  .modal-content .modal-header {
+    text-align: center;
+    padding: 5px;
+    border-bottom: 0;
+    margin-bottom: 60px; }
+    .modal-content .modal-header .registration, .modal-content .modal-header .signin, .modal-content .modal-header .details {
+      display: none;
+      font-weight: normal;
+      font-size: 13px; }
+    .modal-content .modal-header.firstStep .registration, .modal-content .modal-header.nextStep .signin, .modal-content .modal-header.lastStep .details {
+      display: block; }
+    .modal-content .modal-header .close {
+      color: black; }
+  .modal-content .authentification {
+    background-color: white;
+    margin-top: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); }
+    .modal-content .authentification .modal-body {
+      padding-bottom: 0; }
+      .modal-content .authentification .modal-body .registration, .modal-content .authentification .modal-body .signin, .modal-content .authentification .modal-body .details {
+        display: none; }
+      .modal-content .authentification .modal-body.firstStep .registration, .modal-content .authentification .modal-body.nextStep .signin, .modal-content .authentification .modal-body.lastStep .details {
+        display: block; }
+      .modal-content .authentification .modal-body .form-horizontal .form-group {
+        margin-right: 5px;
+        margin-left: 5px; }
+        .modal-content .authentification .modal-body .form-horizontal .form-group input, .modal-content .authentification .modal-body .form-horizontal .form-group input::placeholder, .modal-content .authentification .modal-body .form-horizontal .form-group select, .modal-content .authentification .modal-body .form-horizontal .form-group option, .modal-content .authentification .modal-body .form-horizontal .form-group .form-control {
+          color: #5B6774; }
+        .modal-content .authentification .modal-body .form-horizontal .form-group input {
+          border: 0;
+          border-bottom: 1px solid #ccc;
+          border-radius: 0; }
+      .modal-content .authentification .modal-body button.submit {
+        background-color: #8FC286;
+        width: 100%; }
+  .modal-content .modal-footer {
+    border-top: 0;
+    padding-top: 0;
+    margin-top: 70px; }
+    .modal-content .modal-footer button.left, .modal-content .modal-footer button.right, .modal-content .modal-footer button.ok {
+      display: none; }
+    .modal-content .modal-footer.firstStep button.right, .modal-content .modal-footer.nextStep button.left, .modal-content .modal-footer.lastStep button.ok {
+      display: inline-block; }
+    .modal-content .modal-footer.lastStep button.right {
+      display: none; }
+    .modal-content .modal-footer button.ok {
+      background-color: #8FC286; }
+    .modal-content .modal-footer button.left, .modal-content .modal-footer button.right {
+      background-color: #5B6774; }
+    .modal-content .modal-footer button.cancel {
+      color: white;
+      background-color: #DB6962; }

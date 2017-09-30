@@ -1,0 +1,24 @@
+.modal-content .toaster {
+  padding: 15px;
+  border-radius: 4px;
+  position: absolute;
+  bottom: -90px;
+  width: 100%;
+  display: none;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0; }
+  .modal-content .toaster .glyphicon-remove {
+    float: right; }
+  .modal-content .toaster.show {
+    display: block; }
+  .modal-content .toaster.info {
+    background-color: #304254; }
+  .modal-content .toaster.warning {
+    background-color: orangered; }
+  .modal-content .toaster.error {
+    background-color: darkred; }
+  .modal-content .toaster.success {
+    background-color: #276A54; }

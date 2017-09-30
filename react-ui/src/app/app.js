@@ -1,45 +1,35 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import { Route } from 'react-router'
 
-import { injectIntl } from 'react-intl';
-import Identification from './components/identification/identification';
+import Identification from './pages/authentification/identification/index'
+//import MainLayout from './layouts/default/layout'
+import Home from './pages/homepage'
+import MyStory from './pages/myFriends'
+import MyTrip from './pages/myTrip'
+import MyFriends from './pages/myFriends'
+import MyPics from './pages/myPics'
+import MyLife from './pages/myLife'
+import MyPage from './pages/myPage'
+import MyProfile from './pages/myProfile'
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      message: null,
-      fetching: true
-    };
-  }
-
-  componentDidMount() {
-    fetch('/api')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error(`status ${response.status}`);
-        }
-        return response.json();
-      })
-      .then(json => {
-        this.setState({
-          message: json.message,
-          fetching: false
-        });
-      }).catch(e => {
-        this.setState({
-          message: `API call failed: ${e}`,
-          fetching: false
-        });
-      })
-  }
-
-  render() {
-    return (
-      <div className="App">
-          <Identification />
-      </div>
-    );
-  }
+    render() {
+        return (
+            <div id="container">
+                <Route exact path='/' render={() => <Identification store={this.props.store} history={this.props.history} login="false" signin="false" />} />
+                <Route path='/login' render={() => <Identification store={this.props.store} history={this.props.history} login="true" signin="false" />} />
+                <Route path='/signin' render={() => <Identification store={this.props.store} history={this.props.history} login="false" signin="true" />} />
+                <Route path='/home' render={() => <Home store={this.props.store} history={this.props.history} />} />
+                <Route path='/myStory' render={() => <MyStory store={this.props.store} history={this.props.history} />} />
+                <Route path='/myTrip' render={() => <MyTrip store={this.props.store} history={this.props.history} />} />
+                <Route path='/myFriends' render={() => <MyFriends store={this.props.store} history={this.props.history} />} />
+                <Route path='/myPics' render={() => <MyPics store={this.props.store} history={this.props.history} />} />
+                <Route path='/myLife' render={() => <MyLife store={this.props.store} history={this.props.history} />} />
+                <Route path='/myPage' render={() => <MyPage store={this.props.store} history={this.props.history} />} />
+                <Route path='/myProfile' render={() => <MyProfile store={this.props.store} history={this.props.history} />} />
+            </div>
+        )
+    }
 }
 
-export default injectIntl(App);
+export default App
