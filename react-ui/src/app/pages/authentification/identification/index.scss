@@ -59,12 +59,13 @@ $screen-sm-min:     768px;
         color: #fff;
         position: absolute;
         bottom: 0;
-
+        left: 0;
 
         @media (min-width: $screen-sm-min) {
             font-size: 12px;
             bottom: 0;
             right: 10px;
+            left: inherit;
         }
 
         a, span {

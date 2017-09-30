@@ -43,12 +43,14 @@
     font-size: 8px;
     color: #fff;
     position: absolute;
-    bottom: 0; }
+    bottom: 0;
+    left: 0; }
     @media (min-width: 768px) {
       #identification #notices {
         font-size: 12px;
         bottom: 0;
-        right: 10px; } }
+        right: 10px;
+        left: inherit; } }
     #identification #notices a, #identification #notices span {
       margin-left: 5px; }
     #identification #notices img {
