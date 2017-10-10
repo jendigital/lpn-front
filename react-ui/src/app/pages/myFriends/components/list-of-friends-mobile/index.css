@@ -1,18 +1,18 @@
-#list-of-friends {
+#list-of-friends-mobile {
   text-align: left;
   margin-left: 50px;
   overflow: scroll; }
-  #list-of-friends .friends-bloc {
+  #list-of-friends-mobile .friends-bloc {
     display: flex;
     flex-direction: column;
     width: 60vw; }
-    #list-of-friends .friends-bloc .first-letter h5 {
+    #list-of-friends-mobile .friends-bloc .first-letter h5 {
       border-bottom: 1px solid rgba(127, 145, 160, 0.52);
       color: rgba(127, 145, 160, 0.52); }
-    #list-of-friends .friends-bloc .friendinfo {
+    #list-of-friends-mobile .friends-bloc .friendinfo {
       display: flex;
       flex-wrap: wrap; }
-    #list-of-friends .friends-bloc .friend {
+    #list-of-friends-mobile .friends-bloc .friend {
       display: flex;
       box-shadow: 2px 3px 5px 2px rgba(48, 66, 84, 0.52);
       margin-right: 30px;
@@ -20,19 +20,19 @@
       position: relative;
       left: 20px;
       margin-bottom: 10px; }
-      #list-of-friends .friends-bloc .friend .avatar {
+      #list-of-friends-mobile .friends-bloc .friend .avatar {
         display: flex;
         justify-content: center;
         flex-direction: column; }
-        #list-of-friends .friends-bloc .friend .avatar img {
+        #list-of-friends-mobile .friends-bloc .friend .avatar img {
           width: 50px;
           height: 50px;
           border-radius: 50px;
           position: relative;
           left: -20px; }
-      #list-of-friends .friends-bloc .friend .info h6 {
+      #list-of-friends-mobile .friends-bloc .friend .info h6 {
         margin-top: 15px;
         margin-bottom: 0; }
-      #list-of-friends .friends-bloc .friend .info p {
+      #list-of-friends-mobile .friends-bloc .friend .info p {
         color: #D3D3D3;
         font-size: 9px; }

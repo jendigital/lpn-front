@@ -10,4 +10,19 @@ $screen-md-min:     992px;
         height: 100vh;
         width: calc(100vw - 100px);
     }
+
+    .responsive-vue {
+        @media (min-width: $screen-md-min){
+            display: none;
+        }
+    }
+
+    .web-vue {
+        display: none;
+        width: calc(100vw - 100px);
+
+        @media (min-width: $screen-md-min){
+            display: flex;
+        }
+    }
 }

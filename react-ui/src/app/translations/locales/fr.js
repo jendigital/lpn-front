@@ -61,6 +61,11 @@ const messages = {
   "reset.email":                "Un e-mail a été envoyé à cette adresse pour vous permettre de réinitialisez votre mot de passe.",
   "reset.retry":                "Réessayer",
 
+  "profile.news":               "News",
+  "profile.contacts":           "Mes contacts",
+  "profile.messages":           "Messages",
+  "profile.search":             "Recherche",
+
   "menu.myStory":               "myStory",
   "menu.myTrip":                "myTrip",
   "menu.myFriends":             "myFriends",

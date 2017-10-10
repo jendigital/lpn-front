@@ -50,7 +50,7 @@ class Identification extends Component {
         return (
             <div id="identification">
                 <div id="connection">
-                    <img src='https://storage.googleapis.com/life-personal-network/commun/logo.png' alt="logo" />
+                    <img alt='Life' src='https://storage.googleapis.com/life-personal-network/commun/logo.png' alt="logo" />
                     <div>
                         <Button onClick={this.signinShow}>
                             <FormattedMessage id="identification.signup" />

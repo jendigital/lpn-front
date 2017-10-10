@@ -7,3 +7,12 @@
     .content {
       height: 100vh;
       width: calc(100vw - 100px); } }
+  @media (min-width: 992px) {
+    .content .responsive-vue {
+      display: none; } }
+  .content .web-vue {
+    display: none;
+    width: calc(100vw - 100px); }
+    @media (min-width: 992px) {
+      .content .web-vue {
+        display: flex; } }

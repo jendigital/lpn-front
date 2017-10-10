@@ -41,7 +41,7 @@ class MobileMenu extends Component {
                                 </a>
                             </div>
                             <div>
-                                <img alt='avatar' className='avatar' onClick={this.showConfig} onMouseOver={this.showConfig} src="https://storage.googleapis.com/life-personal-network/commun/avatar.jpg" />
+                                <img alt='avatar' className='avatar' onClick={this.showConfig} onMouseOver={this.showConfig} src="https://storage.googleapis.com/life-personal-network/profile/avatar.jpg" />
                             </div>
                             <div className='config' onClick={this.hideConfig} onMouseLeave={this.hideConfig}>
                                 <div className='config_top'>
