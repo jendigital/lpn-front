@@ -173,6 +173,7 @@ const messages = {
   "myLife.cnn":                 "CNN",
 
   "myFriends.title":            "my Friends",
+  "myFriends.search":           "Contact...",
   "myFriends.messages":         "Messages",
   "myFriends.lastActivities":   "Dernières Activités",
   "myFriends.add":              "Ajouter à votre Life?",

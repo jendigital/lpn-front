@@ -33,7 +33,7 @@ class Profile extends Component {
                         <div>
                             <Icon name='comments-o' />
                             <FormattedMessage id='profile.messages' />
-                            <span className='nbofmsg'> 4 </span>
+                            <span className='nbOfMsg'> 4 </span>
                         </div>
                     </div>
                 </div>
